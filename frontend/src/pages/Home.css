@@ -1,0 +1,184 @@
+.home-page {
+  background: var(--color-bg);
+}
+
+.stats-section {
+  padding: 48px 0;
+  background: var(--color-secondary);
+  color: var(--color-text-inverse);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-text-inverse);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.featured-trips-section,
+.destinations-section,
+.features-section {
+  padding: 80px 0;
+}
+
+.cta-section {
+  padding: 80px 0 100px;
+}
+
+.cta-card {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+  border-radius: var(--radius-xl);
+  color: var(--color-text-inverse);
+}
+
+.cta-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.cta-card p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-actions .btn-outline {
+  border-color: var(--color-text-inverse);
+  color: var(--color-text-inverse);
+}
+
+.cta-actions .btn-outline:hover {
+  background: var(--color-text-inverse);
+  color: var(--color-primary);
+}
+
+.features-grid {
+  margin-top: 40px;
+}
+
+.feature-card {
+  padding: 32px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all var(--transition-normal);
+}
+
+.feature-card:hover .feature-icon {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.feature-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+  
+  .stat-value {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-trips-section,
+  .destinations-section,
+  .features-section {
+    padding: 60px 0;
+  }
+  
+  .cta-section {
+    padding: 60px 0 80px;
+  }
+  
+  .cta-card {
+    padding: 40px 24px;
+  }
+  
+  .cta-card h2 {
+    font-size: 28px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-value {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
